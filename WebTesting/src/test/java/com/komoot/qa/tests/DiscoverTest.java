@@ -29,7 +29,7 @@ public class DiscoverTest extends TestBase{
 		signInPage = new SignInPage();
 		discoverPage = new DiscoverPage();
 		signUpPage = startPage.takeToSignUpPage();
-		signInPage.userSignIn(prop.getProperty("email"), prop.getProperty("password"));
+		discoverPage = signInPage.userSignIn(prop.getProperty("email"), prop.getProperty("password"));
 		
 	}
 	

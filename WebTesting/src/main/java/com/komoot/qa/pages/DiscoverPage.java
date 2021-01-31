@@ -21,6 +21,13 @@ public class DiscoverPage extends TestBase {
 		@FindBy(xpath = "//*[@id=\"pageMountNode\"]/div/div[3]/div[1]/div/div/div[1]/div[1]/div/div/div[2]/div/div[2]/div/div[2]/button/span")
 		WebElement searchBtn;
 
+		@FindBy(xpath = "//*[@id=\"pageMountNode\"]/div/div[2]/div/div/div[1]/ul/li[2]/a")
+		WebElement routeText;
+		
+		@FindBy(xpath = "//*[@id=\"pageMountNode\"]/div/div[2]/div/div/div[2]/div[3]/div[2]/a/div/span/div/div")
+		WebElement profileTab;
+		
+		
 		
 		public DiscoverPage() {
 			
@@ -42,5 +49,19 @@ public class DiscoverPage extends TestBase {
 			return new DiscoverPage();
 			
 		}
-		
+
+			public RoutePlanPage clickOnRoutePlanPage() {
+				
+				routeText.click();
+				return new RoutePlanPage();
+				
+		}
+
+			public ProfilePage clickOnProfileTab() {
+				
+				profileTab.click();
+				return new ProfilePage();
+				
+		}
 }
+		
