@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.komoot.qa.util.TestUtil;
 
@@ -15,6 +16,7 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public static WebDriverWait wait;
 	
 	
 	public TestBase() {

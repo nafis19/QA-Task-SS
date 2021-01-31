@@ -1,5 +1,8 @@
 package com.komoot.qa.pages;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -24,21 +27,25 @@ public class SignUpPage extends TestBase{
 	@FindBy(xpath = "//*[@id=\"pageMountNode\"]/div/div/div[1]/div/div/div[2]/form/div/div[7]/button")
 	WebElement signUpBtn;
 
+	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy-HH.mm.ss");
+	String date = simpleDateFormat.format(new Date());
+	String useremail = "test+" + date + "@test.com";
+	
 	
 	public SignUpPage() {
 		
 		PageFactory.initElements(driver, this);
 	}
 	
-	public OnboardingPage signUp() {
+	public DiscoverPage signUp() {
 		
-		EmailTextField.sendKeys("1412999999@test.com");
+		EmailTextField.sendKeys(useremail);
 		ContinueWithEmailBtn.click();
 		userName.sendKeys("John Doe111");
 		passWord.sendKeys("987456321");
 		signUpBtn.click();
 		
-		return new OnboardingPage();
+		return new DiscoverPage();
 		
 	}
 }

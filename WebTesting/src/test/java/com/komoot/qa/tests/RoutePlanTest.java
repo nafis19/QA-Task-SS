@@ -6,17 +6,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.komoot.qa.base.TestBase;
+import com.komoot.qa.pages.DiscoverPage;
+import com.komoot.qa.pages.RoutePlanPage;
 import com.komoot.qa.pages.SignInPage;
 import com.komoot.qa.pages.SignUpPage;
 import com.komoot.qa.pages.StartPage;
 
-public class SignInTest extends TestBase {
+public class RoutePlanTest extends TestBase{
 	
 	StartPage startPage;
 	SignUpPage signUpPage;
 	SignInPage signInPage;
+	DiscoverPage discoverPage;
+	RoutePlanPage routePlanPage;
 	
-	public SignInTest() {
+	public RoutePlanTest() {
 		super();
 	}
 	
@@ -24,20 +28,28 @@ public class SignInTest extends TestBase {
 	public void setUp() {
 		initialization();
 		startPage = new StartPage();
+		routePlanPage = new RoutePlanPage();
 		signInPage = new SignInPage();
+		discoverPage = new DiscoverPage();
 		signUpPage = startPage.takeToSignUpPage();
+		discoverPage = signInPage.userSignIn(prop.getProperty("email"), prop.getProperty("password"));
+		routePlanPage = discoverPage.clickOnRoutePlanPage();
 		
 	}
 	
 	
-	@Test
-	public void userSignInTest() {
+	@Test(priority=1)
+	public void verifyRoutePlanTextTest() {
 		
-		signInPage.userSignIn(prop.getProperty("email"), prop.getProperty("password"));
+		Assert.assertEquals(routePlanPage.verifyRoutePlanText(), "Route planner");
 		
-		String text2 = signInPage.verifyPage();
-		System.out.println(text2);
-		Assert.assertEquals(text2, "Find the Perfect Tour");
+	}
+	
+	@Test(priority=2)
+	public void planRouteTest() {
+		
+		routePlanPage.planRoute();
+
 	}
 	
 	
@@ -46,5 +58,6 @@ public class SignInTest extends TestBase {
 		driver.quit();		
 
 	}
+
 
 }

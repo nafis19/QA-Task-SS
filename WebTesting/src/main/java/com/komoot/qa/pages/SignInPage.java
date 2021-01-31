@@ -30,14 +30,14 @@ public class SignInPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public RoutePlanPage userSignIn(String email, String password) {
+	public DiscoverPage userSignIn(String email, String password) {
 		
 		EmailTextField.sendKeys(email);
 		ContinueWithEmailBtn.click();
 		passWord.sendKeys(password);
 		loginBtn.click();
 	
-		return new RoutePlanPage();
+		return new DiscoverPage();
 	}
 	
 	public String verifyPage() {
