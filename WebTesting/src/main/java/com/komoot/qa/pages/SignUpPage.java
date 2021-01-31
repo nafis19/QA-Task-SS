@@ -12,11 +12,8 @@ public class SignUpPage extends TestBase{
 	@FindBy(xpath = "//*[@id=\"email\"]")
 	WebElement EmailTextField;
 	
-	//*[@id="email"]
-	
 	@FindBy(xpath = "//*[@id=\"pageMountNode\"]/div/div/div[1]/div/div/div[2]/div/div[1]/form/div[4]/button/div/div[2]")
 	WebElement ContinueWithEmailBtn;
-	
 	
 	@FindBy(xpath = "//*[@id=\"display_name\"]")
 	WebElement userName;
