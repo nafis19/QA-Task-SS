@@ -1,0 +1,15 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Komoot app Test Automation Suite">
+	<test name="Basic App test cases">
+		<classes>
+			<class name="com.komoot.qa.tests.StartPageTest"></class>
+			<class name="com.komoot.qa.tests.SignUpTest"></class>
+			<class name="com.komoot.qa.tests.SignInTest"></class>
+			<class name="com.komoot.qa.tests.DiscoverTest"></class>
+			<class name="com.komoot.qa.tests.RoutePlanTest"></class>
+			<class name="com.komoot.qa.tests.ProfilePageTest"></class>
+		</classes>
+	</test>
+</suite>
+	
