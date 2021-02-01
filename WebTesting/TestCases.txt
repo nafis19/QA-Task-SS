@@ -1,0 +1,140 @@
+List of Test Cases.
+
+TestCase-1:
+takeToSignUpPage
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+
+
+TestCase-2:
+userSignUpTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter Username
+7.Enter Password
+8.Click SignUp Button
+
+
+TestCase-3:
+userSignInTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button
+
+TestCase-4:
+verifyDiscoverTextTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button
+8.Verify Discover page is loaded by verifying discover text
+
+
+TestCase-5:
+searchTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button, Discover page loads
+8.Click on Bike Icon
+9.Click on Where to Text Box
+10.Enter "Berlin" in textbox
+11.Click on Search Button
+
+
+TestCase-6:
+verifyRoutePlanTextTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button
+8.Verify Discover page is loaded
+9.Click Route Plan page
+10.Verify the Route Plan text is present
+
+
+TestCase-7:
+planRouteTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button
+8.Verify Discover page is loaded
+9.Click Route Plan page
+10.Enter "Berlin" in the search text box
+11.Select Berlin from the option
+12.Click set as destination button
+13.Enter "Potsdam" in the search text box
+14.Select Potsdam from the option
+15.Click Start Here button
+16.Click on the Sports tab
+17.Select Bike Tour option
+18.Click on Save button
+
+
+TestCase-8:
+verifyNumberOfToursTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button, Discover page loads
+8.Click on Profile Menu
+9.Click on Tours
+10.Verify the number of text using getText method
+
+
+TestCase-9:
+userLogOutTest
+
+Steps:
+1.Open URL
+2.Click on Accept Button
+3.Click on SignUp or Login Button
+4.Enter email address
+5.Click on Continue with Email button
+6.Enter password
+7.Click Login Button, Discover page loads
+8.Click on the settings button(3 dots)
+9.Click on LogOut
+
+
+
