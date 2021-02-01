@@ -1,0 +1,46 @@
+/*SQL task.*/ 
+
+/*1.Return Employee record with highest salary*/
+
+SELECT  emp_id, first_name, last_name, gender, position, department_id, salary
+FROM Employee
+WHERE salary = (SELECT MAX(salary) FROM Employee);
+
+
+/*2.Return the highest salary in employee table*/
+
+SELECT emp_id, MAX(salary)
+FROM Employee;
+
+
+/*3.Return 2nd highest salary from employee table*/
+
+SELECT emp_id, salary 
+FROM Employee 
+ORDER BY salary DESC 
+LIMIT 1,1
+
+/*4.Select range of employees based on id*/
+
+SELECT * 
+FROM Employee
+WHERE emp_id BETWEEN 10000 AND 20000;
+
+
+/*5.Return an employee with highest salary and the employee’s department name*/
+
+SELECT Employee.emp_id, Employee.first_name, Employee.last_name, Employee.salary, Department.department_name  
+FROM Employee, Department 
+WHERE Employee.salary =  
+(SELECT MAX(salary) 
+FROM Employee)
+AND Department.department_id=Employee.department_id;
+
+
+/*6.Return highest salary, employee_name, department_name for EACH department */
+
+SELECT CONCAT(first_name,' ', last_name) AS Employee_Name, MAX(e.salary) AS highest_salary, d.department_name
+FROM Employee AS e
+INNER JOIN Department AS d
+ON d.department_id = e.department_id
+GROUP BY e.department_id
