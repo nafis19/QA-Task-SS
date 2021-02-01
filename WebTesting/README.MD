@@ -6,6 +6,7 @@ This is a sample test automation project using page object model framework. Code
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [List of Test Cases](#list-of-test-cases)
 * [How to run the Tests](#How-o-run-the-Tests)
 
 ## General info
@@ -17,7 +18,10 @@ Project is created with:
 * Selenium version: 3.141.59
 * Maven version: 3.5.0
 * TestNg version: 7.3.0
-	
+
+## List of Test Cases
+List of test cases are wrriten in this file TestCases.txt
+
 ## How to run the Tests
 To run this project:
 
