@@ -1,0 +1,41 @@
+Jenkins Task.
+
+I have configured Jenkins job in my local machine and another job connecting the git repository of WebTesting.
+But could not host it.
+
+Here, I am describing the steps I did:
+
+1.I have installed Jenkins and Opened Jenkins from cmd:
+
+java -jar jenkins.war --enable-future-java   (as java version was not supporting)
+
+2.Opened Jenkins in browser and logged in using admin credentials:
+
+http://localhost:8080/
+
+3.At first I moded to manage plugins to install all maven and testng-results plugins
+
+4.After installation, restarted the Jenkins.
+
+5.From dashboard, I clicked New Item
+
+6.Gave a sample name of the Jenkins Job Project and Selected Maven Project and Clicked OK, Configure page opened up
+
+7.Added description
+
+8.Under source code management, I added git repo url and branch name (for local I did not select this option)
+
+9.Under the Build menu, I gave the root POM location and gave a command under Goals and Options: clean install
+
+10.Under the post build actions menu, I chose publish testNG results option
+
+11.Clicked apply and then Ok to save the configuration.
+
+12.Then clicked Build Now from the Job dashboard and the build started.
+
+13.After the completion of build, test results are found in the dashboard or Test Results menu.
+
+
+I have attached the screenshots of my dashboard page and the Test results page.
+
+
